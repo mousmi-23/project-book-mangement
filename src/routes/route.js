@@ -1,11 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const AuthorController= require("../controllers/authorController")
-const BlogController= require("../controllers/blogController")
-const Mw = require("../middleware/auth")
-
-
-
+const UserController= require("../controllers/userController")
+const BookController= require("../controllers/bookController")
+//const Mw = require("../middleware/auth")
 
 
 router.get("/test-me", function (req, res) {
@@ -13,14 +10,16 @@ router.get("/test-me", function (req, res) {
 })
 
 
-// creating author
-router.post("/BASE_URL/authors", AuthorController.createAuthor)
-// login the author and creating jwt token
-router.post("/login", BlogController.loginUser)
-// creating the blog
+// creating User
+router.post("/register", UserController.createUser)
 
+// login the User and creating jwt token
+router.post("/login", UserController.loginUser)
 
+// creating the book
+router.post("/books", BookController.createBook)
 
-
+// get all the books
+router.get("/books", BookController.getBook)
 
 module.exports = router;
