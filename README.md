@@ -1,5 +1,13 @@
 # Thorium
 
+# Group Members :
+
+1. Mohsin Ali 
+2. Mousmi Rahangdale
+3. Soun Verma
+4. Anil Tiwary
+
+
 ## Project - Books Management
 
 ### Key points
